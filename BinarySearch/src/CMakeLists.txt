@@ -1,0 +1,32 @@
+
+
+set(target BinarySearch)
+
+add_library(${target} STATIC BinarySearch.h BinarySearch.cpp)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
