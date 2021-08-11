@@ -92,7 +92,6 @@ template<typename ContainerType>
 class BinarySearch : public SearchAlgorithm<ContainerType> {
 public:
     using ItemType = typename ContainerType::value_type;
-//    using container_ = typename SearchAlgorithm<ContainerType>::container_;
 
     explicit BinarySearch(ContainerType container)
             : SearchAlgorithm<ContainerType>(container) {}
@@ -100,7 +99,6 @@ public:
     int find(const ItemType &item) override {
         return find(item, 0, this->container_.size()-1);
     }
-
 
     int find(const ItemType &item, int start, int end)  {
         // first ensure the container is sorted.

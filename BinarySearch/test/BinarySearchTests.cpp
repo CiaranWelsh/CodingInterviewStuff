@@ -90,7 +90,20 @@ TEST_F(BinarySearchTests, t) {
 
 
 
-
+/*
+ * What I've learnt from implementing BinarySearch
+ * ---------------------------------------------------------------
+ * - Firstly, I've found that I immediately tried to generalize the algorithm to all search and sortable
+ *   algorithms. This takes a bit more effort and I ran into trouble. It would have been better to start out
+ *   implementing the business logic of the BinarySearch algorithm itself, and only once it works
+ *   on (say) a vector of ints, work on generalizing to other types. This way, I can use my passing tests as a guide when generalizing. This process I think would be more efficient.
+ * - Moreover, by jumping the gun and trying to pre-empt the framework needed for the algorithm, I've
+ *   inadvertedly implemented something that isn't required - the Sortable interface.
+ *   Since the binary search algorithm only works on sorted containers, and we are looking for the index of
+ *   the item in the container passed in, it is necessary for the user to sort the container proir to input
+ *   into Binary Search. therefore, the container does not need to be sortable in order for binary search to
+ *   work. It does however need to be sortable, but this shouldd be done outside the scope of BinarySearch.
+ */
 
 
 
